@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>HAKE PLANE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#020024">
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+color:white;
+text-align:center;
+}
+#login,#loading,#main{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:15px;
+}
+#loading,#main{display:none}
+input,button{
+padding:15px;
+font-size:18px;
+border:none;
+border-radius:10px;
+width:80%;
+max-width:300px;
+margin:auto;
+}
+button{background:#00ffcc;font-weight:bold}
+button:disabled{background:gray}
+.loader{
+width:15px;height:15px;
+border-radius:50%;
+background:white;
+animation:spin 1s infinite alternate;
+}
+@keyframes spin{from{opacity:.2}to{opacity:1}}
+.circle{
+width:200px;height:200px;
+border-radius:50%;
+background:radial-gradient(circle,#00ffcc,#0066ff);
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:60px;
+}
+.rotate{animation:rot 3s linear}
+@keyframes rot{to{transform:rotate(360deg)}}
+#lockBox{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.8);
+justify-content:center;
+align-items:center;
+}
+#lockContent{
+background:#222;
+padding:20px;
+border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="login">
+<h1>HAKE</h1>
+<input id="playerId" placeholder="ID">
+<input id="password" type="password" placeholder="PASSWORD">
+<button id="startBtn" disabled>START</button>
+</div>
+
+<div id="loading">
+<div class="loader"></div><div class="loader"></div>
+<div class="loader"></div><div class="loader"></div>
+</div>
+
+<div id="main">
+<div class="circle" id="plane">✈️</div>
+<h2 id="number">---</h2>
+<button onclick="nextNumber()">START</button>
+<button onclick="resetNumbers()">استعادة</button><br><br>
+<button onclick="openLock()">🔐</button>
+</div>
+
+<div id="lockBox">
+<div id="lockContent">
+<p>
+النسخه المجانيه 85%<br>
+المدفوعه 100%<br><br>
+💰 السعر: 100 جنيه<br>
+📞 01064320060
+</p>
+<button onclick="closeLock()">إغلاق</button>
+</div>
+</div>
+
+<script>
+const correctPass="JOO2011";
+const nums=[3.49,1.48,5.93,6.5,1.2,16.2,21.3,2.1];
+let index=0;
+
+const login=document.getElementById("login");
+const loading=document.getElementById("loading");
+const main=document.getElementById("main");
+const idInput=document.getElementById("playerId");
+const passInput=document.getElementById("password");
+const startBtn=document.getElementById("startBtn");
+const plane=document.getElementById("plane");
+const number=document.getElementById("number");
+const lockBox=document.getElementById("lockBox");
+
+idInput.oninput=passInput.oninput=()=>{
+startBtn.disabled=!(
+idInput.value.trim()!=="" &&
+passInput.value.trim()==="JOO2011"
+);
+};
+
+startBtn.onclick=()=>{
+login.style.display="none";
+loading.style.display="flex";
+setTimeout(()=>{
+loading.style.display="none";
+main.style.display="flex";
+},3000);
+};
+
+function nextNumber(){
+if(index>=nums.length)return;
+plane.classList.add("rotate");
+setTimeout(()=>{
+plane.classList.remove("rotate");
+number.innerText=nums[index++];
+},3000);
+}
+function resetNumbers(){index=0;number.innerText="---";}
+function openLock(){lockBox.style.display="flex";}
+function closeLock(){lockBox.style.display="none";}
+</script>
+
+</body>
+                            </html>
