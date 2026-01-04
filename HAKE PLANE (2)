@@ -1,0 +1,105 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://yousefwowb2-stack.github.io/
+Subject: HAKE PLANE
+Date: Sun, 4 Jan 2026 19:53:31 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--O468VxWA67SE5eXQlkxpu1T3yThGC5bCRCkQKTMKRE----"
+
+
+------MultipartBoundary--O468VxWA67SE5eXQlkxpu1T3yThGC5bCRCkQKTMKRE----
+Content-Type: text/html
+Content-ID: <frame-9F59F75F92F768A29E2C13AE8D3C89B6@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://yousefwowb2-stack.github.io/
+
+<!DOCTYPE html><html lang="ar"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-85ae75f3-61fc-4121-bb1b-fedd08685d68@mhtml.blink" />
+
+<title>HAKE PLANE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="https://yousefwowb2-stack.github.io/icon.png">
+<link rel="apple-touch-icon" href="https://yousefwowb2-stack.github.io/icon.png">
+<meta name="theme-color" content="#020024">
+
+
+</head>
+
+<body>
+
+<div id="login">
+<h1>HAKE</h1>
+<input id="playerId" placeholder="ID">
+<input id="password" type="password" placeholder="PASSWORD">
+<button id="startBtn" disabled="">START</button>
+</div>
+
+<div id="loading">
+<div class="loader"></div><div class="loader"></div>
+<div class="loader"></div><div class="loader"></div>
+</div>
+
+<div id="main">
+<div class="circle" id="plane">✈️</div>
+<h2 id="number">---</h2>
+<button>START</button>
+<button>استعادة</button><br><br>
+<button>🔐</button>
+</div>
+
+<div id="lockBox">
+<div id="lockContent">
+<p>
+النسخه المجانيه 85%<br>
+المدفوعه 100%<br><br>
+💰 السعر: 100 جنيه<br>
+📞 01064320060
+</p>
+<button>إغلاق</button>
+</div>
+</div>
+
+
+
+
+                            
+</body></html>
+------MultipartBoundary--O468VxWA67SE5eXQlkxpu1T3yThGC5bCRCkQKTMKRE----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-85ae75f3-61fc-4121-bb1b-fedd08685d68@mhtml.blink
+
+@charset "utf-8";
+
+body { margin: 0px; font-family: Arial; background: linear-gradient(135deg, rgb(2, 0, 36), rgb(9, 9, 121), rgb(0, 212, 255)); color: white; text-align: center; }
+
+#login, #loading, #main { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; gap: 15px; }
+
+#loading, #main { display: none; }
+
+input, button { padding: 15px; font-size: 18px; border: none; border-radius: 10px; width: 80%; max-width: 300px; margin: auto; }
+
+button { background: rgb(0, 255, 204); font-weight: bold; }
+
+button:disabled { background: gray; }
+
+.loader { width: 15px; height: 15px; border-radius: 50%; background: white; animation: 1s ease 0s infinite alternate none running spin; }
+
+@keyframes spin { 
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.circle { width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgb(0, 255, 204), rgb(0, 102, 255)); margin: auto; display: flex; align-items: center; justify-content: center; font-size: 60px; }
+
+.rotate { animation: 3s linear 0s 1 normal none running rot; }
+
+@keyframes rot { 
+  100% { transform: rotate(360deg); }
+}
+
+#lockBox { display: none; position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; }
+
+#lockContent { background: rgb(34, 34, 34); padding: 20px; border-radius: 15px; }
+------MultipartBoundary--O468VxWA67SE5eXQlkxpu1T3yThGC5bCRCkQKTMKRE------
